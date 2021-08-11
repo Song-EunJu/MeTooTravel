@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -19,24 +20,16 @@ public class LoginActivity extends AppCompatActivity {
 
         TextView tv = findViewById(R.id.register_btn);
 
-
-
-                register.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent intent = new Intent()
-            }
-        });
-
-        Button imageButton = (Button) findViewById(R.id.btn1);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        // 버튼 클릭 시 동작
+        tv.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), SubActivity.class);
+            public void onClick(View v){
+                // TextView 클릭될 시 할 코드작성
+                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.in_left, R.anim.in_right);
             }
         });
-    }
     }
 }
