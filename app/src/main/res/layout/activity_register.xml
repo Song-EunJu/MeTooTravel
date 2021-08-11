@@ -68,5 +68,4 @@
         android:text="@string/login"
         android:textColor="@color/gray"
         android:textSize="11dp" />
-
 </LinearLayout>

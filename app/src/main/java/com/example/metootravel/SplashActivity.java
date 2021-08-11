@@ -17,18 +17,18 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         TextView tv;
-        tv = findViewById(R.id.sp_tv);
+        tv = findViewById(R.id.logo_text);
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.spin);
         tv.setAnimation(anim);
 
         Handler hd = new Handler();
-        hd.postDelayed(new SplashHandler(),3000);
+        hd.postDelayed(new SplashHandler(),5000);
 
     }
 
     private class SplashHandler implements Runnable {
         public void run() {
-            startActivity(new Intent(getApplication(), MainActivity.class));
+            startActivity(new Intent(getApplication(), LoginActivity.class));
             SplashActivity.this.finish();
         }
     }

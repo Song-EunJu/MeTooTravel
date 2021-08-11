@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SplashActivity" >
+    tools:context=".LoginActivity" >
 
     <!--    로고 -->
     <ImageView
@@ -48,6 +48,7 @@
             android:background="@color/white"
             android:hint="비밀번호를 입력하세요"
             android:fontFamily="@font/interparkgothiclight"/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -83,25 +84,29 @@
         android:textColor="@color/white"
         android:background="@drawable/naver_login"/>
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/interparkgothicmedium"
-        android:gravity="center_horizontal"
-        android:text="@string/register_question"
-        android:textColor="@color/gray"
-        android:textSize="11dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal">
 
-    <TextView
-        android:layout_width ="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/interparkgothicbold"
-        android:text="@string/register"
-        android:textColor="@color/gray"
-        android:textSize="11dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interparkgothicmedium"
+            android:text="@string/register_question"
+            android:textColor="@color/gray"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/register_btn"
+            android:layout_width ="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interparkgothicbold"
+            android:text="@string/register"
+            android:textColor="@color/black"
+            android:textSize="11dp" />
+    </LinearLayout>
 
 </LinearLayout>
