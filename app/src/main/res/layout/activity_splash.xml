@@ -20,8 +20,8 @@
         android:textSize="36dp" />
 
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="450dp"
+        android:layout_width="480dp"
+        android:layout_height="600dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/postbox" />

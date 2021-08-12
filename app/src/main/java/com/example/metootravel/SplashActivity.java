@@ -22,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         tv.setAnimation(anim);
 
         Handler hd = new Handler();
-        hd.postDelayed(new SplashHandler(),5000);
+        hd.postDelayed(new SplashHandler(),2000);
 
     }
 

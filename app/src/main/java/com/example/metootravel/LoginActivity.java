@@ -44,10 +44,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         // 버튼 클릭 시 동작
         tv.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v){
-                // TextView 클릭될 시 할 코드작성
+                // 회원가입 화면으로 전환
                 Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.in_left, R.anim.in_right);
@@ -60,7 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .requestEmail()
                 .build();
 
-        // Build a GoogleSignInClient with the options specified by gso.
+        // 위에서 만든 GoogleSignInOptions을 사용해 GoogleSignInClient 객체를 만듬
         mGoogleSignInClient = GoogleSignIn.getClient(LoginActivity.this, gso);
 
         //여기서부터는 구글문서에 <기존 로그인한 사용자 확인>
@@ -68,7 +67,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //기존에 로그인 했던 계정을 확인한다.
         GoogleSignInAccount gsa = GoogleSignIn.getLastSignedInAccount(LoginActivity.this);
 
-        // 로그인 되있는 경우 (토큰으로 로그인 처리)
+        // 로그인 되어있는 경우 (토큰으로 로그인 처리)
         if (gsa != null && gsa.getId() != null) {
 
         }
@@ -97,7 +96,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             // The ApiException status code indicates the detailed failure reason.
             // Please refer to the GoogleSignInStatusCodes class reference for more information.
             Log.e(TAG, "signInResult:failed code=" + e.getStatusCode());
-
         }
     }
 
@@ -125,6 +123,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
     }
 }
