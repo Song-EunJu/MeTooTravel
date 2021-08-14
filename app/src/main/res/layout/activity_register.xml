@@ -24,7 +24,7 @@
         android:text="이메일로 가입하기"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/white"
-        android:background="@drawable/login" />
+        android:background="@drawable/basic_login" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
