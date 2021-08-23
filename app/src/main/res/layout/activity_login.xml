@@ -9,6 +9,7 @@
 
     <!--    로고 -->
     <ImageView
+        android:layout_marginTop="80dp"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
@@ -21,17 +22,18 @@
         android:layout_marginEnd="40dp"
         android:layout_marginTop="40dp">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_email" />
-
         <EditText
+            android:id="@+id/email_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:fontFamily="@font/interparkgothiclight"
             android:hint="E-mail을 입력하세요" />
+
+<!--        <ImageView-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:src="@drawable/ic_email" />-->
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -43,15 +45,18 @@
         android:layout_marginTop="10dp">
 
         <EditText
+            android:id="@+id/password_edit"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:hint="비밀번호를 입력하세요"
-            android:fontFamily="@font/interparkgothiclight"/>
+            android:fontFamily="@font/interparkgothiclight"
+            android:hint="비밀번호를 입력하세요" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/basic_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"

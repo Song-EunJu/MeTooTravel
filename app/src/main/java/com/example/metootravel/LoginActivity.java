@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -20,6 +22,14 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -31,11 +41,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private static final String TAG = "LoginActivity";
     Button google_login;
+    Button basic_login;
+    EditText basic_email, basic_password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        basic_login = findViewById(R.id.basic_login); // 일반로그인 버튼
+        basic_email = findViewById(R.id.email_edit); // 이메일 입력창
+        basic_password = findViewById(R.id.password_edit); // 비밀번호 입력창
 
         google_login = findViewById(R.id.google_login); // 구글로그인 버튼
         google_login.setOnClickListener(this);
@@ -105,6 +121,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.google_login:
                 signIn();
                 break;
+            case R.id.basic_login:
+                basicLogin();
+                break;
         }
     }
 
@@ -126,4 +145,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
     }
+
+    public void basicLogin() {
+        Log.d("login", "로그인 하는 중");
+        try {
+            String email = basic_email.getText().toString();
+            String password = basic_password.getText().toString();
+            Log.w("앱에서 보낸 값", email + ", " + password);
+        } catch (Exception e) {
+
+        }
+    }
 }
+
