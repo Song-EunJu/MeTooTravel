@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.metootravel.navigation.CommunityFragment;
+import com.example.metootravel.navigation.HomeFragment;
 import com.example.metootravel.navigation.LetterFragment;
 import com.example.metootravel.navigation.LibraryFragment;
 import com.example.metootravel.navigation.MessageFragment;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BottomNavigationView nav = findViewById(R.id.navigation_bar); // activity_main 에 네비게이션 바 id
         nav.setOnNavigationItemSelectedListener(m);
+        homeFragment = new HomeFragment();
         messageFragment = new MessageFragment();
         letterFragment = new LetterFragment();
         communityFragment = new CommunityFragment();
