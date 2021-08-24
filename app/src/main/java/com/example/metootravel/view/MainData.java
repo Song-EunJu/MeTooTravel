@@ -1,4 +1,4 @@
-package com.example.metootravel;
+package com.example.metootravel.view;
 
 public class MainData {
     private int iv_image;

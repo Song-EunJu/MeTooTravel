@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.metootravel.MainAdapter;
-import com.example.metootravel.MainData;
+import com.example.metootravel.view.MainAdapter;
+import com.example.metootravel.view.MainData;
 import com.example.metootravel.R;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.metootravel">
-
+    <!--  네트워크 사용하기 위한 퍼미션  -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,6 +14,7 @@
         <activity android:name=".RegisterFormActivity"></activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
+
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,5 +24,4 @@
         </activity>
         <activity android:name=".SplashActivity" />
     </application>
-
 </manifest>

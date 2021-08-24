@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1033238531661",
+    "project_id": "metootravel-1628682664443",
+    "storage_bucket": "metootravel-1628682664443.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033238531661:android:402ab840c14c6006695604",
+        "android_client_info": {
+          "package_name": "com.example.metootravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1033238531661-68jrho4m9h57gdhfme4umeqaste49g7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAikNQ4WrYX31tYUDI1u5CPOynxx5tIm7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1033238531661-68jrho4m9h57gdhfme4umeqaste49g7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
