@@ -37,5 +37,6 @@
                 android:layout_height="wrap_content"
                 android:text="이 사람은 롤 개잘해요"/>
         </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

@@ -49,9 +49,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        basic_login = findViewById(R.id.basic_login); // 일반로그인 버튼
         basic_email = findViewById(R.id.email_edit); // 이메일 입력창
         basic_password = findViewById(R.id.password_edit); // 비밀번호 입력창
+        basic_login = findViewById(R.id.basic_login); // 일반로그인 버튼
+        basic_login.setOnClickListener(this);
 
         google_login = findViewById(R.id.google_login); // 구글로그인 버튼
         google_login.setOnClickListener(this);
@@ -118,11 +119,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.google_login:
-                signIn();
-                break;
             case R.id.basic_login:
                 basicLogin();
+                break;
+            case R.id.google_login:
+                signIn();
                 break;
         }
     }

@@ -11,7 +11,7 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/logo" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -19,8 +19,8 @@
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="20dp"
         android:text="이메일로 가입하기"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/white"
@@ -31,7 +31,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="20dp"
         android:text="카카오로 시작하기"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/black"
@@ -42,10 +42,21 @@
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
         android:text="네이버로 시작하기"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/white"
         android:background="@drawable/naver_login"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="구글로 시작하기"
+        android:fontFamily="@font/interparkgothicmedium"
+        android:textColor="@color/white"
+        android:background="@drawable/google_login"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

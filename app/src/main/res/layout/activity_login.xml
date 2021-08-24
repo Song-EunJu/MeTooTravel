@@ -69,6 +69,7 @@
         android:background="@drawable/basic_login" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/kakao_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
@@ -80,6 +81,7 @@
         android:background="@drawable/kakao_login"/>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/naver_login"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
