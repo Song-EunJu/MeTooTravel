@@ -2,7 +2,7 @@
     <string name="app_name">나도기행</string>
     <string name="register_question">아직 계정이 없으신가요? </string>
     <string name="register"> 회원가입</string>
-    <string name="login_question">이미 계정이 있으신가요? </string>
+    <string name="login_question">이미 계정이 있으신가요?  </string>
     <string name="login"> 로그인</string>
     <string name="server_client_id">1033238531661-11faq3cjkt801d4qcvcblv33ensjajb3.apps.googleusercontent.com</string>
     <!-- TODO: Remove or change this placeholder text -->

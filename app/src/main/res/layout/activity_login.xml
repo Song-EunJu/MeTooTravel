@@ -62,7 +62,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:layout_marginTop="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:text="로그인"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/white"
@@ -74,7 +74,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:text="카카오로 로그인"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/black"
@@ -86,7 +86,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="15dp"
         android:text="네이버로 로그인"
         android:fontFamily="@font/interparkgothicmedium"
         android:textColor="@color/white"
@@ -100,7 +100,7 @@
         android:layout_marginEnd="40dp"
         android:text="구글로 로그인"
         android:fontFamily="@font/interparkgothicmedium"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:background="@drawable/google_login"/>
 
     <LinearLayout

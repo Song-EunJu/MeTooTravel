@@ -1,6 +1,7 @@
 package com.example.metootravel;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.metootravel.navigation.HomeFragment;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -43,6 +45,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button google_login;
     Button basic_login;
     EditText basic_email, basic_password;
+    Fragment homeFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,7 +146,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), MainActivity.class)); // 4번
+//            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
         }
     }
 

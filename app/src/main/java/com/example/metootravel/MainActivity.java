@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.action_home:
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
-
-//                    startActivity(new Intent(getApplication(), MainActivity.class));
                     return true;
                 case R.id.action_message:
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_content, messageFragment).commit();
@@ -69,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
         letterFragment = new LetterFragment();
         communityFragment = new CommunityFragment();
         libraryFragment = new LibraryFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_content, homeFragment).commit();
+
     }
 
 }

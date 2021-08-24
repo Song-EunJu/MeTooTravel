@@ -17,7 +17,6 @@ import com.example.metootravel.R;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-
     private ArrayList<MainData> arrayList;
     private MainAdapter mainAdapter;
     private RecyclerView recyclerView;
