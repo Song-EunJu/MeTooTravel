@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="design_fab_size_normal" tools:override="true">58dp</dimen>
+<!--    전체버튼 크기-->
+    <dimen name="design_fab_image_size" tools:override="true">53dp</dimen>
+    <!--그 안 사진 크기-->
+</resources>

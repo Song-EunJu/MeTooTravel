@@ -17,6 +17,7 @@ import com.example.metootravel.navigation.HomeFragment;
 import com.example.metootravel.navigation.LetterFragment;
 import com.example.metootravel.navigation.LibraryFragment;
 import com.example.metootravel.navigation.MessageFragment;
+import com.google.android.material.bottomappbar.BottomAppBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     Fragment communityFragment;
     Fragment libraryFragment;
 
+    BottomAppBar bab;
+
+
     private BottomNavigationView.OnNavigationItemSelectedListener m
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -42,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.action_message:
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_content, messageFragment).commit();
                     return true;
-                case R.id.action_letter:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.main_content, letterFragment).commit();
-                    return true;
+//                case R.id.action_letter:
+//                    getSupportFragmentManager().beginTransaction().replace(R.id.main_content, letterFragment).commit();
+//                    return true;
                 case R.id.action_community:
                     getSupportFragmentManager().beginTransaction().replace(R.id.main_content, communityFragment).commit();
                     return true;
@@ -56,11 +60,16 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView nav = findViewById(R.id.navigation_bar); // activity_main 에 네비게이션 바 id
+        bab = findViewById(R.id.bottom_app_bar);
+        setSupportActionBar(bab);
+
+
         nav.setOnNavigationItemSelectedListener(m);
         homeFragment = new HomeFragment();
         messageFragment = new MessageFragment();
