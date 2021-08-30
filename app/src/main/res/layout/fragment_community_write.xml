@@ -55,8 +55,9 @@
     </TextView>
 
     <Button
-        android:layout_width="97dp"
-        android:layout_height="62dp"
+        android:id="@+id/writeRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/passion_orange"
         android:fontFamily="@font/interparkgothicmedium"
         android:text="등록"
@@ -71,14 +72,13 @@
     </Button>
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/writeContent"
         android:layout_width="356dp"
         android:layout_height="644dp"
-        android:background="@drawable/write_border"
         android:gravity="center"
         android:hint="write here"
         android:inputType="textMultiLine"
-        android:lines="30"
+        android:lines="26"
         android:maxWidth="30.0dip"
         android:minWidth="10.0dip"
         android:scrollHorizontally="false"

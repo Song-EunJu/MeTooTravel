@@ -7,60 +7,45 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.metootravel.R;
+import com.example.metootravel.view.MainData;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CommunityWriteFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class CommunityWriteFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    EditText editContent;
+    Button writeRegister;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CommunityWriteFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CommunityWriteFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CommunityWriteFragment newInstance(String param1, String param2) {
-        CommunityWriteFragment fragment = new CommunityWriteFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
+    public static CommunityWriteFragment newInstance() {
+        return new CommunityWriteFragment();
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_community_write, container, false);
+        View view = inflater.inflate(R.layout.fragment_community_write, container, false);
+        editContent = view.findViewById(R.id.writeContent);
+        writeRegister = view.findViewById(R.id.writeRegister);
+
+        writeRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // 여기서 서버로 보내고 community_home 에서 서버에서 정보를 받아와서 띄워주어야 함
+                Toast myToast = Toast.makeText(view.getContext(), editContent.getText(), Toast.LENGTH_SHORT);
+                myToast.show();
+            }
+        });
+
+        return view;
     }
 }

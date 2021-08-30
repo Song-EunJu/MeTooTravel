@@ -20,17 +20,8 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_letter"
             app:backgroundTint="@color/freedom_blue"
             app:layout_anchor="@id/bottom_app_bar" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
-
-
-<!--android:layout_margin="30dp"
-            android:src="@drawable/nav_button"
-            app:backgroundTint="@color/freedom_blue"
-            app:layout_anchor="@id/bottom_app_bar"
-            app:rippleColor="@color/freedom_blue"
-            app:srcCombat="@drawable/ic_letter"-->

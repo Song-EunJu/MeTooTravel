@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.content.Intent;
@@ -66,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         BottomNavigationView nav = findViewById(R.id.navigation_bar); // activity_main 에 네비게이션 바 id
-        bab = findViewById(R.id.bottom_app_bar);
-        setSupportActionBar(bab);
-
-
         nav.setOnNavigationItemSelectedListener(m);
+
+//        bab = findViewById(R.id.navigation_bar);
+//        setSupportActionBar(bab);
+
         homeFragment = new HomeFragment();
         messageFragment = new MessageFragment();
         letterFragment = new LetterFragment();
@@ -80,4 +82,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void replaceFragment(Fragment fragment){
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_content, fragment).commit();      // Fragment로 사용할 MainActivity내의 layout공간을 선x택
+    }
 }
